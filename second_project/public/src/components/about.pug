@@ -1,0 +1,21 @@
+mixin about()
+  //- About
+  section.about#js-about
+    .wrapper.about__wrapper
+      .about__content
+        //- Photo img
+        .about__phone 
+          .about__phone-img.about__phone-img--move  
+            img(src="/assets/images/phone_left-side.png" alt="phone")
+          .about__phone-img
+            img(src="/assets/images/phone_right-side.png" alt="phone")
+      .about__content.about__content--text(id='js-content') 
+        h3.about__title About 
+        p.about__text BeeProductive is a free and easy-to-use habit tracker that helps you build a routine of positive, life changing habits. Set personal goals, track your progress, and motivate yourself to achieve new heights!
+        p.about__text BeeProductive habit tracker is here to help you make the most of your task management and get things done. Whether you want to break bad, arrange a good habits list, or set task reminder, our app will guide and motivate you on a daily basis. Achieve your goals with our task tracker!
+        .about__market 
+          //- Photo market
+          a(href="#" id='js-store').about__store 
+            img(src="/assets/images/google-play.jpg" alt="Google-play")
+          a(href="#" id='js-store').about__store 
+            img(src="/assets/images/appstore.jpg" alt="Appstore")

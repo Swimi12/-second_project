@@ -1,0 +1,18 @@
+{
+  "name": "second-project",
+  "version": "1.0.0",
+  "description": "Second project description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "second-project"
+  ],
+  "author": "bkravets0@gmail.com Kravets bogdan",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "swiper": "^8.4.4"
+  }
+}

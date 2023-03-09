@@ -1,0 +1,34 @@
+.form {
+  width: 100%;
+  margin-right: 20px;
+  @include media('<=custom-820') {
+    margin-bottom: 20px;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 425px;
+    background: $c-white;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: em(16);
+    line-height: 20px;
+    outline: none;
+    transition: opacity $t-normal;
+    border: 1px solid transparent;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:focus {
+      border: 1px solid $c-orange;
+    }
+    &::placeholder {
+      color: $c-moss-green;
+    }
+  }
+}

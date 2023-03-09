@@ -1,0 +1,70 @@
+mixin regestration()
+  //- Regestration
+  .regestration 
+    form(method='post' id='js-regestration').regestration__form 
+      .regestration__page(id="js-regestration-page")
+        .regestration__wrapper
+          //- * Regestration header
+          .regestration__header 
+            +logo()
+            button.button.button--close.regestration__close(id="js-regestration-close" type='button')
+              svg.icon
+                use(xlink:href='#icon-cross')
+          //- ** First Page
+          .regestration__block.regestration__block--active  
+            .regestration__content
+              // First name
+              label.regestration__label
+                span.regestration__input-title First name
+                input.regestration__input.regestration__firstname(type='text' name='firstname' placeholder='Name')
+                #js-form-first-name-error.regestration__error
+              // Last name
+              label.regestration__label
+                span.regestration__input-title Last name
+                input.regestration__input.regestration__lastname(type='text' name='lastname' placeholder='Last name')
+                #js-form-lasts-name-error.regestration__error
+              // Email
+              label.regestration__label
+                span.regestration__input-title Email
+                input.regestration__input.regestration__email(type='email' name='email' placeholder='user123@gmail.com')
+                #js-form-email-error.regestration__error
+            .regestration__photo
+              img(src="./assets/icons/bee_form_first.svg" alt="bee")
+          //- ** Second Page
+          .regestration__block 
+            .regestration__content
+              // Usernamee
+              label.regestration__label
+                span.regestration__input-title Username
+                input.regestration__input.regestration__username(type='text' name='username' placeholder='Username')
+                #js-form-first-name-error.regestration__error
+              // Password
+              label.regestration__label
+                span.regestration__input-title Password
+                input.regestration__input.regestration__password(type='password' name='password' placeholder='Enter password')
+                #js-form-lasts-name-error.regestration__error
+              // Season animation
+              label.regestration__label
+                span.regestration__input-title Disabled season animation
+                input.regestration__input.regestration__disabled-season-animation(type='checkbox' name='disabledSeasonAnimation')
+                .regestration__custom-checkbox 
+                  svg.icon.regestration__checkmark 
+                    use(xlink:href='#icon-checkmark')
+                #js-form-email-error.regestration__error
+            .regestration__photo
+              img(src="./assets/icons/bee_form_second.svg" alt="bee")
+          //- ** Third Page
+          .regestration__block
+            .regestration__title Keep in touch!
+
+            +bee_form_third()
+            button.button.button--colorized.regestration__submit(type='submit' id='js-regestration-submit') 
+              span Submit
+          //- * Regestration footerr
+          .regestration__footer   
+            .regestration__number 
+              span.regestration__item.regestration__item--active 1
+              span.regestration__item 2
+              span.regestration__item 3
+            button.button.button--colorized.regestration__continue(id='js-regestration-next' type='button')  
+              span Next

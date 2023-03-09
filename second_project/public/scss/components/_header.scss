@@ -1,0 +1,36 @@
+.header {
+  background-color: $c-azure;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__block {
+    display: flex;
+    @include media('<=desktop') {
+      display: none;
+    }
+  }
+  &__navigation {
+    margin-right: 75px;
+    display: flex;
+    align-items: center;
+  }
+  &__burger {
+    display: none;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+  &__scroll {
+    transition: padding $t-normal;
+    padding: 5px 0px;
+  }
+}

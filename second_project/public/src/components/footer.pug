@@ -1,0 +1,19 @@
+mixin footer()
+  //- Footer
+  footer.footer
+    .wrapper.footer__wrapper 
+      .footer__block 
+        //- Footer logo
+        .footer__logo
+          +logo()
+        //- Footer social
+        .footer__social 
+          +social()
+      .footer__block 
+        h4.footer__title Join a Newsletter
+        p.footer__text Your Email
+        //- Footer input
+        .footer__regestration 
+          +form()
+          button.button.button--text-black(type='submit')
+            span Subscribe 

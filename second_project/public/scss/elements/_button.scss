@@ -1,0 +1,57 @@
+.button {
+  background: $c-white;
+  border: 1px solid $c-black;
+  border-radius: 20px;
+  height: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-weight: 700;
+  font-size: em(16);
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity $t-normal;
+  &:hover {
+    opacity: 0.7;
+  }
+  &--colorized {
+    background: $c-orange;
+    color: $c-white;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: none;
+    align-items: center;
+    display: flex;
+  }
+  &--text-black {
+    height: 60px;
+    border: none;
+    background: $c-orange;
+    color: $c-black;
+    font-weight: 600;
+    font-size: em(14);
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    @include media('<=phone') {
+      padding: 0px 15px;
+    }
+  }
+  &--close {
+    background-color: transparent;
+    border: none;
+    animation: swing 3000ms infinite ease-in-out;
+  }
+  &--log-in {
+    margin-right: 45px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    @include media('<=desktop') {
+      margin-right: 20px;
+    }
+    @include media('<=small') {
+      margin-bottom: 20px;
+    }
+  }
+}

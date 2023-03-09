@@ -1,0 +1,94 @@
+.reviews {
+  margin-bottom: 60px;
+  @include media('<=phone') {
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: em(48);
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    margin-bottom: 135px;
+    @include media('<=phone') {
+      margin-bottom: 50px;
+      font-size: em(36);
+    }
+  }
+  &__content {
+    display: flex;
+  }
+  &__comment {
+    @include media('<=phone') {
+      max-width: 360px;
+    }
+    background-color: $c-white;
+    border: 1px solid $c-moss-green;
+    // border-radius: 30px 30px 98px 30px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 385px;
+    height: 260px;
+    position: relative;
+    // &::after {
+    //   content: '';
+    //   background-color: $c-azure;
+    //   transform: rotate(132deg);
+    //   border-bottom: 1px solid $c-moss-green;
+    //   width: 79px;
+    //   position: absolute;
+    //   height: 20px;
+    //   bottom: 19.7px;
+    //   right: -16.2px;
+    // }
+  }
+
+  &__orange {
+    position: absolute;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    background-color: $c-orange;
+    top: -27px;
+    left: 27px;
+  }
+  &__stars {
+    font-size: em(16);
+    padding-top: 60px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    color: $c-blue;
+  }
+  &__text {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $c-silver;
+    margin-bottom: 20px;
+    font-size: em(16);
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+  &__user {
+    margin-left: 30px;
+    display: flex;
+  }
+  &__photo {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+  &__first-last-name {
+    font-weight: 700;
+    font-size: em(14);
+    line-height: 17px;
+    margin-bottom: 2px;
+  }
+  &__subtext {
+    font-weight: 400;
+    font-size: em(12);
+    line-height: 15px;
+  }
+}

@@ -1,0 +1,25 @@
+mixin burger()
+  //- Burger
+  .burger 
+    //-  Button Burger
+    button.burger__button#js-burger
+      span.burger__line
+      span.burger__line
+      span.burger__line
+    #js-header-navigation.burger__page
+      .burger__wrapper  
+        //- Burger Navigation
+        .burger__navigation
+          nav.navigation 
+            .navigation__wrapper 
+              ul.navigation__list#js-header-navigation-list 
+                li.navigation__item 
+                  a.navigation__link(href="#js-about") About 
+                li.navigation__item 
+                  a.navigation__link(href="#js-advantage") Advantage 
+                sli.navigation__item 
+                  a.navigation__link(href="#js-contacts") Contact 
+        .burger__regestration 
+          //- +regestration() 
+        .burger__button   
+          +button-regestration()

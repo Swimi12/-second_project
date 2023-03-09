@@ -1,0 +1,36 @@
+//- * Include
+include ./src/components/index 
+include ./src/elements/index
+//- * Base
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		//- Styles 
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+		link(rel="stylesheet" href="./index.css" )
+
+		//- Favicon
+		link(rel="icon" href="./favicon.ico")
+		//- Swiper
+		script(src='./node_modules/swiper/swiper-bundle.min.js')
+		title Bee productive 
+	body
+		//- Icons
+		+symbol-defs()
+		//- app
+		.app(id="js-app")
+			+header()
+			+banner()
+			+about()
+			+advantage()
+			+reviews()
+			+contacts()
+			+footer()
+		//- Script
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD10cqCnWoKBFIRi563eUKkfLxjbiVYR-E&region=EN&language=en&callback=initMap&v=weekly' async)
+		script(src='./js/map.js')
+		script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+		script(defer type='module' src='./index.js')

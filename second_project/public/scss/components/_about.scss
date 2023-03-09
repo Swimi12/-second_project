@@ -1,0 +1,91 @@
+.about {
+  padding-top: 115px;
+  margin-bottom: 225px;
+  @include media('<=desktop') {
+    margin-bottom: 100px;
+  }
+  @include media('<=phone') {
+    margin-bottom: 50px;
+  }
+  &__content {
+    width: 50%;
+    position: relative;
+    @include media('<=desktop') {
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+    &--text {
+      display: none;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    @include media('<=desktop') {
+      flex-direction: column;
+    }
+  }
+  &__phone {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 110px;
+    @include media('<=custom-1120') {
+      padding-right: 60px;
+    }
+    @include media('<=desktop') {
+      padding-right: 0px;
+      justify-content: space-around;
+    }
+    @include media('<=phone') {
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+  }
+  &__phone-img {
+    width: 200px;
+    height: 555px;
+    @include media('<=phone') {
+      width: 150px;
+      height: auto;
+    }
+    &--move {
+      position: absolute;
+      left: 0;
+      top: 20%;
+      @include media('<=desktop') {
+        position: relative;
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: em(48);
+    line-height: 53px;
+    margin-bottom: 40px;
+  }
+  &__text {
+    font-weight: 400;
+    line-height: 34px;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+  &__market {
+    display: flex;
+  }
+  &__store {
+    max-width: 220px;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      animation: swing 1s linear;
+    }
+  }
+  &__fade-left {
+    animation: fadeInRight 700ms ease-in-out;
+  }
+}

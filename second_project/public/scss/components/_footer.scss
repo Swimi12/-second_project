@@ -1,0 +1,50 @@
+.footer {
+  background-color: $c-blue;
+  padding-top: 65px;
+  padding-bottom: 80px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include media("<=phone") {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__block {
+    width: 50%;
+    @include media("<=phone") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__logo {
+    margin-bottom: 25px;
+  }
+  &__title {
+    line-height: 34px;
+    color: $c-white;
+    margin-bottom: 35px;
+    @include media("<=phone") {
+      margin-bottom: 15px;
+      font-size: em(16);
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: em(16);
+    line-height: 25px;
+    color: $c-white;
+    margin-bottom: 20px;
+  }
+  &__regestration {
+    display: flex;
+    @include media("<=custom-820") {
+      flex-direction: column;
+    }
+  }
+}

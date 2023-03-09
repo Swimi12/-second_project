@@ -1,0 +1,72 @@
+.burger {
+  color: $c-white;
+  display: none;
+
+  &__button {
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    z-index: 300;
+  }
+
+  &__line {
+    background-color: $c-black;
+    transition: $t-normal;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: block;
+    width: 34px;
+    height: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    flex-direction: column;
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-top: 140px;
+    display: flex;
+  }
+
+  @include media("<=desktop") {
+    display: block;
+
+    &--open &__line:nth-child(2) {
+      opacity: 0;
+    }
+
+    &--open &__line:nth-child(1) {
+      transform: translateY(11px) rotate(45deg);
+    }
+
+    &--open &__line:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+  }
+
+  &__page {
+    background-color: $c-azure;
+    pointer-events: none;
+    position: fixed;
+    height: 100vh;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    &--show {
+      transition: opacity $t-normal;
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+  }
+}

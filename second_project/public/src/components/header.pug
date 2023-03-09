@@ -1,0 +1,28 @@
+mixin header()
+  //- Header
+  header.header(id='js-header')
+    .header__wrapper.wrapper 
+      //- header logo
+      //- +logo()
+      .header__block   
+        //- Navigation
+        .header__navigation
+          nav.navigation 
+            .navigation__wrapper 
+              ul.navigation__list 
+                li.navigation__item 
+                  a.navigation__link(href="#js-about") About 
+                li.navigation__item 
+                  a.navigation__link(href="#js-advantage") Advantage 
+                sli.navigation__item 
+                  a.navigation__link(href="#js-contacts") Contact 
+        //- Regestration
+        .header__regestration 
+          //- +regestration()
+        .header__button 
+          //- +button-regestration()
+          //- Burger
+          .header__burger 
+            //- +burger()
+
+

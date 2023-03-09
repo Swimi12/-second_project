@@ -1,0 +1,72 @@
+mixin banner()
+  //- Banner
+  section.banner 
+    .wrapper.banner__wrapper 
+      .banner__block
+        .banner__side 
+          h1.banner__title A useful app for organizing your affairs.
+          p.banner__text Many routine tasks? We have a solution. 
+          button.button.button--colorized(type="button").banner__button
+            span Get started 
+          .banner__content 
+            .content 
+              .content__photo 
+                //- Users Photo
+                .content__img.content__img--first
+                  img(src="/assets/images/banner_people_1.png" alt="people")
+                .content__img.content__img--second
+                  img(src="/assets/images/banner_people_2.png" alt="people")
+                .content__img.content__img--third
+                  img(src="/assets/images/banner_people_3.png" alt="people")
+              .content__text 
+                .content__title 2,291 
+                .content__subtext Happy Customers
+              .content__line 
+              //- Ratting
+              .content__ratting  
+                .content__number 4.8/5
+                .content__stars
+                  .content__star
+                    svg.icon
+                      use(xlink:href='#icon-star')
+                  .content__star
+                    svg.icon
+                      use(xlink:href='#icon-star')
+                  .content__star
+                    svg.icon
+                      use(xlink:href='#icon-star')
+                  .content__star
+                    svg.icon
+                      use(xlink:href='#icon-star')
+                  .content__star.content__star--empty
+                    svg.icon
+                      use(xlink:href='#icon-star')
+                  span.content__span Ratting 
+        //-  Bee SVG
+        .banner__side--adaptation
+          .banner__bee 
+            +bee_banner()
+            p.banner__text-transform Become productive like a bee
+      .banner__features 
+        //- Features
+        .features 
+          p.features__headline  Features for a better experience
+          .features__content
+            .features__block 
+              .features__img 
+                img(src="/assets/images/customization.jpg" alt="customization")
+              .features__info 
+                .features__title Customization 
+                p.features__text The app is fully customizable - you can name your habit, choose a ...
+            .features__block 
+              .features__img 
+                img(src="/assets/images/statistics.jpg" alt="Statistics")
+              .features__info 
+                .features__title Statistics 
+                p.features__text Track your habits and analyze progress for a task - build ...
+            .features__block 
+              .features__img 
+                img(src="/assets/images/managment.jpg" alt="managment")
+              .features__info 
+                .features__title Managment 
+                p.features__text Habits and tasks broken down into daily fragments of your ...
